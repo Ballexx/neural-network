@@ -1,6 +1,6 @@
 import pygame
 import sys
-from brain import neuralnetwork
+from brain import NeuralNetwork
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 800
@@ -46,9 +46,8 @@ while True:
                     elif color == (255,255,255):
                         input_vals.append(1)
 
-            brain = neuralnetwork()
+            brain = NeuralNetwork()
             brain.calculate(input_vals)
-
 
     for row in all_rects:
         for item in row:
